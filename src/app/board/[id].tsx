@@ -68,7 +68,13 @@ export default function BoardScreen() {
       const board = await loadBoard(id);
       if (!board) {
         Alert.alert("Error", "Board not found", [
-          { text: "OK", onPress: () => router.back() },
+          { text: "OK", onPress: () => {
+            if (router.canGoBack()) {
+              router.back();
+            } else {
+              router.replace("/");
+            }
+          }},
         ]);
         return;
       }
@@ -212,7 +218,13 @@ export default function BoardScreen() {
       <View style={styles.header}>
         <Pressable
           style={styles.backBtn}
-          onPress={() => router.back()}
+          onPress={() => {
+            if (router.canGoBack()) {
+              router.back();
+            } else {
+              router.replace("/");
+            }
+          }}
           accessibilityRole="button"
           accessibilityLabel="Go back"
         >
