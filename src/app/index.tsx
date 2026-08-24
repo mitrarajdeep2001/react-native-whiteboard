@@ -10,7 +10,6 @@ import {
     FlatList,
     Image,
     Pressable,
-    SafeAreaView,
     StatusBar,
     StyleSheet,
     Text,
@@ -18,6 +17,7 @@ import {
     useWindowDimensions,
     View,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function HomeScreen() {
   const { boards, loading, createBoard, deleteBoard, renameBoard, refreshBoards } =

@@ -5,12 +5,12 @@ import {
     ActivityIndicator,
     Alert,
     Pressable,
-    SafeAreaView,
     StyleSheet,
     Text,
     View,
 } from "react-native";
 import { useSharedValue } from "react-native-reanimated";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import { WhiteboardCanvas, WhiteboardCanvasHandle } from "@/components/canvas/WhiteboardCanvas";
 import { Toolbar } from "@/components/toolbar/Toolbar";
