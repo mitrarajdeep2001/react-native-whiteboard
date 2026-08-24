@@ -3,7 +3,7 @@
     "name": "react-native-todo-app",
     "slug": "react-native-todo-app",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/images/icon.png",
     "scheme": "reactnativetodoapp",
     "userInterfaceStyle": "automatic",
@@ -31,6 +31,13 @@
           "backgroundColor": "#208AEF",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos to insert images on the whiteboard.",
+          "microphonePermission": false
         }
       ]
     ],
